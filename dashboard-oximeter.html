@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords"
+		content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+	<link rel="canonical" href="https://demo.adminkit.io/" />
+
+	<title>AdminKit Demo - Bootstrap 5 Admin Template</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+	<!-- Choose your prefered color scheme -->
+	<!-- <link href="css/light.css" rel="stylesheet"> -->
+	<!-- <link href="css/dark.css" rel="stylesheet"> -->
+
+	<!-- BEGIN SETTINGS -->
+	<!-- Remove this after purchasing -->
+	<link class="js-stylesheet" href="css/light.css" rel="stylesheet">
+	<script src="js/settings.js"></script>
+	<script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
+	<style>
+		body {
+			opacity: 0;
+		}
+	</style>
+	<!-- END SETTINGS -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120946860-10"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-120946860-10', { 'anonymize_ip': true });
+	</script>
+</head>
+<!--
+  HOW TO USE: 
+  data-theme: default (default), dark, light, colored
+  data-layout: fluid (default), boxed
+  data-sidebar-position: left (default), right
+  data-sidebar-layout: default (default), compact
+-->
+
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar js-sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand">
+					<span class="sidebar-brand-text align-middle">
+						Health Kit
+					</span>
+				</a>
+
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Pages
+					</li>
+					<li class="sidebar-item active">
+						<a data-bs-target="#dashboards" data-bs-toggle="collapse" class="sidebar-link">
+							<i class="align-middle" data-feather="sliders"></i> <span
+								class="align-middle">Dashboards</span>
+						</a>
+						<ul id="dashboards" class="sidebar-dropdown list-unstyled collapse show"
+							data-bs-parent="#sidebar">
+							<li class="sidebar-item active"><a class="sidebar-link"
+									href="dashboard-oximeter.html">Oximeter</a></li>
+							<li class="sidebar-item"><a class="sidebar-link"
+									href="dashboard-thermometer.html">Thermometer<span
+										class="sidebar-badge badge bg-primary"></span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link"
+									href="dashboard-bloodPressureMeter.html">Blood pressure meter<span
+										class="sidebar-badge badge bg-primary"></span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-Scale.html">Scale<span
+										class="sidebar-badge badge bg-primary"></span></a></li>
+						</ul>
+					</li>
+			</div>
+		</nav>
+
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="sidebar-toggle js-sidebar-toggle">
+					<i class="hamburger align-self-center"></i>
+				</a>
+				<a href="https://www.ired.info/" class="navbar-right"><img style="width: 20vw;margin-left: 28vw; height: 5vw;" src="https://loyalmaster.s3.ap-southeast-1.amazonaws.com/ired/iREd-logo_with+name.png"></a>
+			</nav>
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<div class="row mb-2 mb-xl-3">
+						<div class="col-auto d-none d-sm-block">
+							<h3><strong>Oximeter</strong> History</h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xl-6 col-xxl-6 d-flex">
+							<div class="card flex-fill w-100">
+								<div class="card-header">
+									<h5 class="card-title mb-0">SpO2</h5>
+								</div>
+								<div class="card-body pt-2 pb-3">
+									<div class="chart chart-sm">
+										<canvas id="chartjs-dashboard-line1"></canvas>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-xl-6 col-xxl-6 d-flex">
+							<div class="card flex-fill w-100">
+								<div class="card-header">
+									<h5 class="card-title mb-0">Heart Rate</h5>
+								</div>
+								<div class="card-body pt-2 pb-3">
+									<div class="chart chart-sm">
+										<canvas id="chartjs-dashboard-line2"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xl-6 col-xxl-6 d-flex">
+							<div class="card flex-fill w-100">
+								<div class="card-header">
+									<h5 class="card-title mb-0">PI</h5>
+								</div>
+								<div class="card-body pt- pb-3">
+									<div class="chart chart-sm">
+										<canvas id="chartjs-dashboard-line3"></canvas>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<p class="mb-0">
+								<a href="https://adminkit.io/" target="_blank" class="text-muted"><strong>Health
+										Kit</strong></a> &copy;
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="js/app.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+
+			// Line chart
+
+
+			var apiUrl = 'https://script.google.com/macros/s/AKfycbzB2WT927sgUtUUPsk9NxAznZu7WxYrRe-ZPbbbTPUCj2YPMh4v3lAzj0kZFtXOLX5TFQ/exec?sheetId=1wDrwapC57W021E1t3U4yVGrztLHG5DBuXZVkQX2Tf-A&sheetName=oximeter';
+			var xValues = [];
+			var yValues = [];
+			fetch(apiUrl).then(response => {
+				return response.json();
+			}).then(data => {
+				//data.shift();
+				for (let j = 1; j < data[0].length; j++) {
+					var ctx = document.getElementById("chartjs-dashboard-line"+j).getContext("2d");
+					var gradientLight = ctx.createLinearGradient(0, 0, 0, 225);
+					gradientLight.addColorStop(0, "rgba(215, 227, 244, 1)");
+					gradientLight.addColorStop(1, "rgba(215, 227, 244, 0)");
+					var gradientDark = ctx.createLinearGradient(0, 0, 0, 225);
+					gradientDark.addColorStop(0, "rgba(51, 66, 84, 1)");
+					gradientDark.addColorStop(1, "rgba(51, 66, 84, 0)");
+
+					for (let i = 1; i < data.length; i++) {
+						if ((data.length - i) < 11) {
+							xValues.push(data[i][0]);
+							yValues.push(parseInt(data[i][j]));
+						}
+					}
+					new Chart(document.getElementById("chartjs-dashboard-line"+j), {
+
+						type: "line",
+						data: {
+							labels: xValues,
+							datasets: [{
+								label: data[0][j],
+								fill: true,
+								backgroundColor: gradientLight,
+								borderColor: window.theme.primary,
+								data: yValues
+							}]
+						},
+						options: {
+							maintainAspectRatio: false,
+							legend: {
+								display: false
+							},
+							tooltips: {
+								intersect: false
+							},
+							hover: {
+								intersect: true
+							},
+							plugins: {
+								filler: {
+									propagate: false
+								}
+							},
+							scales: {
+								xAxes: [{
+									ticks: {display: false},
+									reverse: true,
+									gridLines: {
+										color: "rgba(0,0,0,0.0)"
+									}
+								}],
+								yAxes: [{
+									ticks: {
+										stepSize: 1000
+									},
+									display: true,
+									borderDash: [3, 3],
+									gridLines: {
+										color: "rgba(0,0,0,0.0)",
+										fontColor: "#fff"
+									}
+								}]
+							}
+						}
+					});
+					xValues = [];
+            		yValues = [];
+				}
+			});
+
+		});
+	</script>
+	
+</body>
+
+</html>
